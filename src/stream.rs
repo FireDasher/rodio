@@ -512,7 +512,7 @@ impl MixerDeviceSink {
                 _stream: stream,
                 mixer: controller,
                 config: *config,
-                log_on_drop: true,
+                log_on_drop: false,
             })
         })
     }
