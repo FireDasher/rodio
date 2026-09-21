@@ -89,8 +89,9 @@ impl MixerDeviceSink {
 
     /// When [`MixerDeviceSink`] is dropped a message is logged to stderr or
     /// emitted through tracing if the tracing feature is enabled.
-    pub fn log_on_drop(&mut self, enabled: bool) {
+    pub fn log_on_drop(mut self, enabled: bool) -> Self {
         self.log_on_drop = enabled;
+        self
     }
 }
 
